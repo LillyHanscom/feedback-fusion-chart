@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { BarChart, ResponsiveContainer, XAxis, YAxis, Bar, Cell, Tooltip, Legend } from 'recharts';
 import { getRatingDistribution } from '@/utils/feedbackData';
-import { ChartConfig } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
 
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
@@ -26,7 +26,7 @@ const FeedbackChart: React.FC = () => {
       <CardContent className="p-6">
         <div className="flex items-center gap-3 mb-4">
           <div className="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10">
-            <ChartConfig className="h-5 w-5 text-primary" />
+            <BarChart3 className="h-5 w-5 text-primary" />
           </div>
           <h3 className="font-medium">Rating Distribution</h3>
         </div>
