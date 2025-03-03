@@ -1,4 +1,3 @@
-
 export interface User {
   id: number;
   name: string;
@@ -40,7 +39,7 @@ export const feedbackData: FeedbackItem[] = [
     user: users[0],
     rating: 4,
     category: 'Usability',
-    comment: "The quiz was intuitive, but I would have liked to see a progress indicator showing how many questions were left.",
+    comment: "The quiz was intuitive and the progress bar showing how many questions were left was helpful.",
     date: "2023-10-15"
   },
   {
