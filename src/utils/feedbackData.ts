@@ -18,18 +18,18 @@ export interface CategoryScore {
   score: number;
 }
 
-// Mock data for 10 users
+// Mock data for 10 users with first names only
 export const users: User[] = [
-  { id: 1, name: 'Alex Thompson', avatar: 'AT' },
-  { id: 2, name: 'Mira Chen', avatar: 'MC' },
-  { id: 3, name: 'Jordan Lee', avatar: 'JL' },
-  { id: 4, name: 'Taylor Kim', avatar: 'TK' },
-  { id: 5, name: 'Sam Rivera', avatar: 'SR' },
-  { id: 6, name: 'Jamie Garcia', avatar: 'JG' },
-  { id: 7, name: 'Morgan Wright', avatar: 'MW' },
-  { id: 8, name: 'Casey Jones', avatar: 'CJ' },
-  { id: 9, name: 'Riley Park', avatar: 'RP' },
-  { id: 10, name: 'Avery Wilson', avatar: 'AW' },
+  { id: 1, name: 'Alex', avatar: 'AT' },
+  { id: 2, name: 'Mira', avatar: 'MC' },
+  { id: 3, name: 'Jordan', avatar: 'JL' },
+  { id: 4, name: 'Taylor', avatar: 'TK' },
+  { id: 5, name: 'Sam', avatar: 'SR' },
+  { id: 6, name: 'Jamie', avatar: 'JG' },
+  { id: 7, name: 'Morgan', avatar: 'MW' },
+  { id: 8, name: 'Casey', avatar: 'CJ' },
+  { id: 9, name: 'Riley', avatar: 'RP' },
+  { id: 10, name: 'Avery', avatar: 'AW' },
 ];
 
 // Mock feedback data
