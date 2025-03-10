@@ -1,3 +1,4 @@
+
 export interface User {
   id: number;
   name: string;
@@ -53,9 +54,9 @@ export const feedbackData: FeedbackItem[] = [
   {
     id: 3,
     user: users[2],
-    rating: 3,
+    rating: 4.5,
     category: 'Visual Design',
-    comment: "The design was clean but felt a bit too minimal. Could use more engaging visuals during the quiz.",
+    comment: "The design was modern and engaging. I especially liked the color scheme and visual transitions.",
     date: "2023-10-17"
   },
   {
@@ -77,9 +78,9 @@ export const feedbackData: FeedbackItem[] = [
   {
     id: 6,
     user: users[5],
-    rating: 2,
+    rating: 4,
     category: 'Visual Design',
-    comment: "The color scheme felt too corporate and cold. Would prefer warmer, more inviting tones.",
+    comment: "The design was pretty good. I liked the icons and illustrations throughout the experience.",
     date: "2023-10-20"
   },
   {
@@ -101,9 +102,9 @@ export const feedbackData: FeedbackItem[] = [
   {
     id: 9,
     user: users[8],
-    rating: 3,
+    rating: 4,
     category: 'Visual Design',
-    comment: "Design was functional but lacked personality. Could benefit from more custom illustrations.",
+    comment: "Design had good personality. I appreciated the attention to detail in the animations.",
     date: "2023-10-23"
   },
   {
