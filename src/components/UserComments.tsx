@@ -10,9 +10,12 @@ interface UserCommentsProps {
 }
 
 const UserComments: React.FC<UserCommentsProps> = ({ comments }) => {
+  // Limit to 5 comments max
+  const limitedComments = comments.slice(0, 5);
+  
   return (
-    <Card className="animate-fade-in-delayed">
-      <CardContent className="p-6">
+    <Card className="animate-fade-in-delayed h-full">
+      <CardContent className="p-6 h-full flex flex-col">
         <div className="flex items-center gap-3 mb-6">
           <div className="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10">
             <MessageSquare className="h-5 w-5 text-primary" />
@@ -20,8 +23,8 @@ const UserComments: React.FC<UserCommentsProps> = ({ comments }) => {
           <h3 className="font-medium">User Comments</h3>
         </div>
         
-        <div className="max-h-[430px] overflow-y-auto pr-2 space-y-5">
-          {comments.map((item, index) => (
+        <div className="space-y-5 flex-1">
+          {limitedComments.map((item, index) => (
             <div 
               key={item.id}
               className="flex gap-4 animate-scale-in"

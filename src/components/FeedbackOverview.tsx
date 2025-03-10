@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import AnimatedNumber from './AnimatedNumber';
 import { getOverallSatisfactionScore, getCategoryScores } from '@/utils/feedbackData';
 import { useAnimatedWidth } from '@/utils/animations';
-import { Smile, BarChart3, Users } from 'lucide-react';
+import { Smile, BarChart3 } from 'lucide-react';
 
 const FeedbackOverview: React.FC = () => {
   const overallScore = getOverallSatisfactionScore();
@@ -13,8 +13,8 @@ const FeedbackOverview: React.FC = () => {
   return (
     <div className="grid gap-6 md:grid-cols-3 animate-fade-in" style={{ animationDelay: '100ms' }}>
       {/* Overall Satisfaction */}
-      <Card className="overflow-hidden">
-        <CardContent className="p-6">
+      <Card className="overflow-hidden h-full">
+        <CardContent className="p-6 h-full flex flex-col">
           <div className="flex items-center gap-3 mb-3">
             <div className="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10">
               <Smile className="h-5 w-5 text-primary" />
@@ -22,7 +22,7 @@ const FeedbackOverview: React.FC = () => {
             <h3 className="font-medium">Overall Satisfaction</h3>
           </div>
           
-          <div className="mt-4 flex items-baseline">
+          <div className="mt-4 flex items-baseline flex-1 justify-center items-center">
             <div className="text-4xl font-bold tracking-tight">
               <AnimatedNumber 
                 value={overallScore} 
@@ -40,8 +40,8 @@ const FeedbackOverview: React.FC = () => {
       </Card>
       
       {/* Category Performance */}
-      <Card className="overflow-hidden md:col-span-2">
-        <CardContent className="p-6">
+      <Card className="overflow-hidden md:col-span-2 h-full">
+        <CardContent className="p-6 h-full flex flex-col">
           <div className="flex items-center gap-3 mb-3">
             <div className="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10">
               <BarChart3 className="h-5 w-5 text-primary" />
@@ -49,7 +49,7 @@ const FeedbackOverview: React.FC = () => {
             <h3 className="font-medium">Category Performance</h3>
           </div>
           
-          <div className="mt-6 space-y-5">
+          <div className="mt-6 space-y-5 flex-1 flex flex-col justify-center">
             {categoryScores.map((category, index) => {
               const barWidth = useAnimatedWidth(category.score * 20, 300 + (index * 100));
               const colorVariants = [

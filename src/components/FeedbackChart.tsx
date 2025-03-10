@@ -21,11 +21,9 @@ const CustomTooltip = ({ active, payload }: any) => {
 const FeedbackChart: React.FC = () => {
   const ratingDistribution = getRatingDistribution();
   
-  console.log('Rating distribution:', ratingDistribution); // Debug log
-  
   return (
-    <Card className="animate-fade-in" style={{ animationDelay: '200ms' }}>
-      <CardContent className="p-6">
+    <Card className="animate-fade-in h-full" style={{ animationDelay: '200ms' }}>
+      <CardContent className="p-6 h-full flex flex-col">
         <div className="flex items-center gap-3 mb-4">
           <div className="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10">
             <BarChart3 className="h-5 w-5 text-primary" />
@@ -33,7 +31,7 @@ const FeedbackChart: React.FC = () => {
           <h3 className="font-medium">Rating Distribution</h3>
         </div>
         
-        <div className="h-72 mt-6">
+        <div className="flex-1">
           {ratingDistribution.length > 0 ? (
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
